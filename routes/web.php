@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// routes 
+
 Route::post('customers/import', [CustomerController::class, 'import'])->name('customers.import');
 Route::get('customers/export', [CustomerController::class, 'export'])->name('customers.export');
 Route::resource('customers', CustomerController::class);
